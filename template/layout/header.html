@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav" id="main_menu">
+    <li data-ng-repeat="item in mainMenu" class="{$item.href$}" data-ng-class="{'active': currentSection == item.href}">
+        <a data-ng-href="/{$item.href$}" title="{$item.href$}" data-ng-click="changeSection(item)">{$item.title$}</a>
+    </li>
+</ul>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html data-ng-app="mintApp">
+
+<head>
+    {% load staticfiles %}
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="http://mintitmedia.com">
+    <meta name="description" content="">
+    <link rel="shortcut icon" typew="image/png" href="{% static 'img/favicon.ico' %}">
+    <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/screen.css' %}" rel="stylesheet">
+</head>
+
+<body data-ng-controller="gralCtrl">
+    <header id="header">
+        {% include 'layout/header.html' %}
+    </header>
+    <section id="main_content">
+        <div ui-view></div>
+    </section>
+    <footer>
+        {% include 'layout/footer.html' %}
+    </footer>
+    <script type="text/javascript" src="{% static 'angular/angular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angular-ui-router/release/angular-ui-router.js' %}"></script>
+    <script type="text/javascript" src="{% static 'angular-bootstrap/ui-bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mint.app.js' %}"></script>
+</body>
+
+</html>
